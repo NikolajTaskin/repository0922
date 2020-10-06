@@ -1,12 +1,8 @@
-import {loginFromToken} from './login';
-import {loginForm} from './loginForm';
-import {registerForm} from './registerForm';
+import {mount} from './library/mount';
+import h from './library/hyperScript';
+import Main from './Main';
+import "./style.scss";
 
-if (!loginFromToken()) {
-  const formElement = loginForm();
-  const registerFormElement = registerForm();
-  document.body.append(formElement);
-  document.body.append(registerFormElement);
-} else {
-  document.body.innerHTML = 'yay prisiloginom!';
-}
+const root = document.getElementById('app');
+mount(h(Main), root);
+
