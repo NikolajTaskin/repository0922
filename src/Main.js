@@ -3,7 +3,6 @@ import h from './library/hyperScript';
 import Navigation from './components/Navigation';
 import Component from './library/Component';
 
-
 export default class Main extends Component {
 	constructor() {
 		super();
@@ -11,9 +10,7 @@ export default class Main extends Component {
 	}
 
 	login() {
-	    this.setState({
-	      isLoggedIn: loginFromToken()
-	    });
+	    this.setState.isLoggedIn = loginFromToken();
   	}
 
 	render() {
